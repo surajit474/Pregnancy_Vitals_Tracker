@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 fun scheduleVitalsReminder(context: Context) {
 
     val workRequest = PeriodicWorkRequestBuilder<VitalsReminderWorker>(
-        1, TimeUnit.HOURS
+        5, TimeUnit.HOURS
     ).build()
 
     WorkManager.getInstance(context).enqueueUniquePeriodicWork(
