@@ -1,6 +1,7 @@
 package com.android.pregnancyvitalstracker
 
 
+
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -38,14 +39,14 @@ class VitalsReminderWorker(
             applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
 
-        val channel = NotificationChannel(
-            channelId,
-            "Vitals Reminder",
-            NotificationManager.IMPORTANCE_DEFAULT
-        ).apply {
-            description = "Reminder to log pregnancy vitals"
-        }
-        notificationManager.createNotificationChannel(channel)
+            val channel = NotificationChannel(
+                channelId,
+                "Vitals Reminder",
+                NotificationManager.IMPORTANCE_DEFAULT
+            ).apply {
+                description = "Reminder to log pregnancy vitals"
+            }
+            notificationManager.createNotificationChannel(channel)
 
 
         val notification = NotificationCompat.Builder(applicationContext, channelId)

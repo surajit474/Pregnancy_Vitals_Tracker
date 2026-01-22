@@ -9,7 +9,7 @@ import javax.inject.Singleton
 
 @Singleton
 class LocalItemRepository @Inject
-constructor(val itemDao: ItemDao) {
+    constructor(val itemDao: ItemDao) {
 
 
     fun getAllItemsStream(): Flow<List<LocalItem>> = itemDao.getAllItems()

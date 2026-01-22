@@ -10,7 +10,7 @@ import com.android.pregnancyvitalstracker.util.DateTimeConverter
 
 @Database(entities = [LocalItem::class], version = 1, exportSchema = false)
 @TypeConverters(DateTimeConverter::class)
-abstract class ItemDatabase : RoomDatabase() {
+abstract class ItemDatabase: RoomDatabase() {
 
     abstract fun itemDao(): ItemDao
 
